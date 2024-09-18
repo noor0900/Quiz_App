@@ -1,0 +1,168 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #1e3c72 0%, #2a5298 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+/* Centering the Quiz Body */
+#quizBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animated Quiz Container */
+main {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    width: 100%;
+    animation: popIn 1s ease-out forwards;
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Quiz Title */
+.quizTitle {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 6px 12px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-70px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Loading Spinner */
+.loadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.spinner {
+    border: 16px solid rgba(255, 255, 255, 0.3);
+    border-top: 16px solid #f06595;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #ff6b6b, #f06595);
+    color: white;
+    border: none;
+    padding: 18px 38px;
+    margin: 20px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.7);
+    background: linear-gradient(135deg, #ff7e79, #f06595);
+}
+
+/* Button Variants */
+.quizStartButton {
+    background: linear-gradient(135deg, #ff6b6b, #f06595);
+}
+
+.quizStartButton:hover {
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.7);
+    background: linear-gradient(135deg, #ff7e79, #f06595);
+}
+
+.nextBtn {
+    background: linear-gradient(135deg, #f06595, #ff6b6b);
+}
+
+.nextBtn:hover {
+    box-shadow: 0 
+    15px 35px rgba(255, 105, 180, 0.7);
+    background: linear-gradient(135deg, #ff7e79, #f06595);
+
+}
+
+.green{
+    background: green;
+}
+
+.red{
+    background: red;
+}
